@@ -9,4 +9,7 @@ sudo apt install -y git curl build-essential pkg-config autoconf bison apache2-u
 # set timezone
 sudo timedatectl set-timezone America/Los_Angeles
 
+# tailscale
+# curl -fsSL https://tailscale.com/install.sh | sh
+
 # EOF
