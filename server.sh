@@ -12,4 +12,7 @@ sudo timedatectl set-timezone America/Los_Angeles
 # tailscale
 # curl -fsSL https://tailscale.com/install.sh | sh
 
+# dotfiles
+# git clone git@github.com:rickt/dotfiles.git
+
 # EOF
