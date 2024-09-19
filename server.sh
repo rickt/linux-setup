@@ -9,7 +9,7 @@ sudo timedatectl set-timezone America/Los_Angeles
 sudo apt install -y qemu-guest-agent
 
 # WORKSTATION
-sudo apt install -y ffmpeg yt-dlp imagemagick network-manager-openconnect-gnome
+sudo apt install -y ffmpeg yt-dlp imagemagick network-manager-openconnect-gnome gnome-tweaks
 
 # gnome 
 sudo apt-get install gnome-browser-connector
