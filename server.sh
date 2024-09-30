@@ -1,6 +1,6 @@
 # ALL BOX ESSENTIALS 
 sudo apt install -y git curl build-essential apache2-utils figlet pwgen atop htop nmon bmon telnet ncat iptraf-ng bwm-ng \
-     tmux nmap sysstat net-tools keychain whois python3-venv snapd vnstat vim-nox neofetch fzf vim prettyping jq fping tree
+     tmux nmap sysstat net-tools keychain whois python3-venv vnstat vim-nox fzf vim jq fping tree
 
 # TIMEDATE
 sudo timedatectl set-timezone America/Los_Angeles
