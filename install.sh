@@ -1,11 +1,12 @@
 # 
 # rickt's automatic ubuntu setup script
+# DON'T DO THIS!!! --> curl https://rickt.dev/linux_setup.sh | bash
 # 
 
 # exit immediately if a command exits with a non-zero status
 set -e
 
-# running gnome?
+# are we running gnome?
 RUNNING_GNOME=$([[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]] && echo true || echo false)
 
 # yes we are
@@ -18,19 +19,25 @@ else
 	echo "*** server detected ***"
 fi
 
+# setup my ssh key
+mkdir -p $HOME/.ssh 2> /dev/null
+curl https://github.com/rickt.keys >> $HOME/.ssh/authorized_keys
+chmod -R 700 $HOME/.ssh
+
 # install the basics that all boxes need
 echo "*** installing the basics ***"
 sudo apt install -y git curl build-essential apache2-utils figlet pwgen atop btop htop \
      bmon nmon telnet ncat iptraf-ng bwm-ng nmap sysstat net-tools keychain whois \
      python3-venv vnstat vim-nox fzf vim jq fping tree
 
-# kvm/qemu vm?
+# install qemu agent if we're on a kvm/proxmox/etc vm
+echo "*** qemu ***"
 BOXTYPE=$(systemd-detect-virt)
 if [ "$BOXTYPE" == "kvm" ]; then
 	sudo apt install -y qemu-guest-agent
 fi
 
-# install gui-only stuff
+# install gui stuff (laptop/workstation that i'm logged into gnome on)
 if $RUNNING_GNOME; then
 	echo "*** installing workstation/laptop-only stuff ***"
 	# install chrome
