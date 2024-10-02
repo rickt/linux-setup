@@ -42,7 +42,7 @@ if $RUNNING_GNOME; then
 	echo "*** installing workstation/laptop-only stuff ***"
 	# install chrome
 	cd ~/Downloads
-	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.debfind
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo dpkg -i google-chrome-stable_current_amd64.deb
 	rm -f google-chrome-stable_current_amd64.deb
 	cd -
