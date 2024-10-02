@@ -21,7 +21,7 @@ fi
 
 # setup my ssh key
 mkdir -p $HOME/.ssh 2> /dev/null
-curl https://github.com/rickt.keys >> $HOME/.ssh/authorized_keys
+curl -s https://github.com/rickt.keys >> $HOME/.ssh/authorized_keys
 chmod -R 700 $HOME/.ssh
 
 # install the basics that all boxes need
