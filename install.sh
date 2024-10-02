@@ -28,7 +28,7 @@ chmod -R 700 $HOME/.ssh
 echo "*** installing the basics ***"
 sudo apt install -y git curl build-essential apache2-utils figlet pwgen atop btop htop \
      bmon nmon telnet ncat iptraf-ng bwm-ng nmap sysstat net-tools keychain whois \
-     python3-venv vnstat vim-nox fzf vim jq fping tree lsof
+     python3-venv vnstat vim-nox fzf vim jq fping tree lsof bind9-dnsutils
 
 # install qemu agent if we're on a kvm/proxmox/etc vm
 echo "*** qemu ***"
