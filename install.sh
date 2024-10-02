@@ -1,6 +1,6 @@
 # 
 # rickt's automatic ubuntu setup script
-# DON'T DO THIS!!! --> curl -L https://rickt.dev/linux_setup.sh | bash
+# DON'T DO THIS!!! --> curl -s -L https://rickt.dev/linux_setup.sh | bash
 # 
 
 # exit immediately if a command exits with a non-zero status
