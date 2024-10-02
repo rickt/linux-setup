@@ -42,7 +42,7 @@ if $RUNNING_GNOME; then
 	echo "*** installing workstation/laptop-only stuff ***"
 	# install chrome
 	cd ~/Downloads
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.debfind
+	wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.debfind
 	sudo dpkg -i google-chrome-stable_current_amd64.deb
 	rm -f google-chrome-stable_current_amd64.deb
 	cd -
@@ -81,7 +81,7 @@ if $RUNNING_GNOME; then
 
 	# Cascadia Nerd Font
 	cd ~/Downloads
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaMono.zip
+	wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaMono.zip
 	unzip CascadiaMono.zip -d CascadiaFont
 	mkdir -p ~/.local/share/fonts
 	cp CascadiaFont/*.ttf ~/.local/share/fonts
