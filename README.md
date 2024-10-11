@@ -1,6 +1,11 @@
 # linux-setup
 rickt's Linux setup scripts
 
+## if you dare
+```
+curl -s -L https://rickt.dev/linux_setup.sh | bash
+```
+
 ## all box essentials
 ```
 sudo apt install -y git curl build-essential apache2-utils figlet pwgen atop btop htop \
